@@ -24,7 +24,7 @@ export const Vote: React.FC = () => {
     if(value!=""){
       console.log(value);
       vote();
-      goTo(State.dashboard);
+      goTo(State.topTen);
     }
   };
 
