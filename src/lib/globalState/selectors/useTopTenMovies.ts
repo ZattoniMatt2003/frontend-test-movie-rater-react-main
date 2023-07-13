@@ -1,4 +1,4 @@
-import { IRatedMovie, useAllMovies } from "./useAllMovies";
+import { useAllMovies } from "./useAllMovies";
 
 export const useTopTenMovies = () => {
   const movies = useAllMovies();
