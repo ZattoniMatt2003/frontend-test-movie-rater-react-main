@@ -24,7 +24,7 @@ export const useAllMovies = (): IRatedMovie[] => {
     }
     )
     )
-  console.log(movies);
+  //console.log(movies);
 
   return movies;
 };
