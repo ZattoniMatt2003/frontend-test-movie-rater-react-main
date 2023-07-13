@@ -13,8 +13,8 @@ export const TopTen: React.FC = () => {
     <Box>
       <Title>Top ten</Title>
       <OrderedList>
-        {movies.map((movie) => (
-          <ListItem key={movie.id}>
+        {movies.map((movie,i) => (
+          <ListItem key={movie.id} style={{opacity: 1-(i*0.1)+0.1}}>
             <span style={{alignItems:'center', display:'flex'}} >
             <Progress value={movie.votes} max={20} size='xs' colorScheme="pink" width='15%'/> {movie.title} ({movie.votes} voti)
             </span>

@@ -17,7 +17,7 @@ export const useAllMovies = (): IRatedMovie[] => {
       title: movie.title,
       author : movie.author,
       year: movie.year,
-      votes : votes[i+1]
+      votes : votes[i+1] ?? 0
     }
     )
     )
