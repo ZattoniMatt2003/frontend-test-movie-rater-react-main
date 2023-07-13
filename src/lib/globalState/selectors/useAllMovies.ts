@@ -12,7 +12,19 @@ export const useAllMovies = (): IRatedMovie[] => {
   // state contains movies and votes in separate properties,
   // join them and return an IRatedMovie array
 
-  const movies = state.movies as IRatedMovie[]; // not valid: replace
+  const movies :IRatedMovie[] = []; 
+
+  state.movies.forEach(movie=>
+    movies.push({
+      id: movie.id,
+      title: movie.title,
+      author : movie.author,
+      year: movie.year,
+      votes : state.votes.id
+    }
+    )
+    )
+  console.log(movies);
 
   return movies;
 };
