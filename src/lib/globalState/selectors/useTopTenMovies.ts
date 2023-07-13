@@ -1,12 +1,9 @@
-import { useAllMovies } from "./useAllMovies";
+import { IRatedMovie, useAllMovies } from "./useAllMovies";
 
-/**
- * Return the 10 most voted movies
- */
 export const useTopTenMovies = () => {
   const movies = useAllMovies();
+  
+  movies.sort((a,b)=> b.votes-a.votes);
 
-  // TODO: reorder only best 10 movies by vote, desc (movie with more votes first)
-
-  return movies;
+  return movies.slice(0,10);
 };

@@ -2,9 +2,6 @@ import { useGlobalState } from "../GlobalStateContext";
 import { MovieList } from "../../../api/types";
 import { useMemo } from "react";
 
-/**
- * Return 2 random movies
- */
 export const useRandomMovies = () => {
   const { state } = useGlobalState();
 
