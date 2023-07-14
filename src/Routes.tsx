@@ -1,5 +1,6 @@
 import React from "react";
 import { Dashboard } from "./components/dashboard/Dashboard";
+import { ErrorPage } from "./components/dashboard/Error"; 
 import { Vote } from "./components/vote/Vote";
 import { useGlobalState } from "./lib/globalState/GlobalStateContext";
 import { useLoadMovies } from "./lib/globalState/mutations/useLoadMovies";
@@ -18,6 +19,8 @@ export const Routes: React.FC = () => {
       return <Vote />;
     case State.topTen:
       return <TopTen />;
+    case State.error:
+      return <ErrorPage />;
     case State.dashboard:
     default:
       return <Dashboard />;

@@ -16,8 +16,6 @@ interface IProps extends React.PropsWithChildren {}
 export const GlobalStateProvider: React.FC<IProps> = ({ children }) => {
   const { state, dispatch } = useMovieRaterLogic();
 
-  console.log(state);
-
   const globalProviderValue = useMemo(
     () => ({ state, dispatch }),
     [state, dispatch],

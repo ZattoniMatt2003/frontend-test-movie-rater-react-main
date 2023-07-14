@@ -22,7 +22,6 @@ export const Vote: React.FC = () => {
   // TODO: Allow voting only after selecting a movie
   const voteAndGo = () => {
     if(value!=""){
-      console.log(value);
       vote();
       goTo(State.topTen);
     }
