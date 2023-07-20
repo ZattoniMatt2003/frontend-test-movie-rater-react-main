@@ -19,9 +19,27 @@ export const Vote: React.FC = () => {
   const [value, select, vote] = useVote();
   const goTo = useGoTo();
 
+  /**
+   * ! NOTE TASK 4
+   * si poteva verificare se era presente un voto utilizzando il valore di value che ritorna da useVote
+   * e controllondo se questo voto era undefined o meno all'interno della funzione voteAndGo utilizzando
+   * un return per bloccare l'esecuzione della funzione.
+   *
+   * const voteAndGo = () => {
+   *  if (!value) {
+   *    return;
+   *  }
+   *
+   *   vote();
+   *   goTo(State.dashboard);
+   * };
+   *
+   *
+   */
+
   // TODO: Allow voting only after selecting a movie
   const voteAndGo = () => {
-    if(value!=""){
+    if (value != "") {
       vote();
       goTo(State.topTen);
     }
